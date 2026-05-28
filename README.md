@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Juan Carlos Medina — Portfolio
 
-## Getting Started
+Personal portfolio site built with Next.js 16 (App Router) and TypeScript.
 
-First, run the development server:
+**Live:** [portfolio-juan-carlos-medina.vercel.app](https://portfolio-juan-carlos-medina.vercel.app)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Tech stack
+
+| Layer       | Tools                                                |
+| ----------- | ---------------------------------------------------- |
+| Framework   | Next.js 16 (App Router), React 19, TypeScript        |
+| Styling     | TailwindCSS v4, custom design tokens                 |
+| Animation   | Framer Motion                                        |
+| Theming     | next-themes (dark / light)                           |
+| Icons       | lucide-react + custom brand icons                    |
+| Deploy      | Vercel                                               |
+
+## Project structure
+
+```
+src/
+├─ app/                  # App Router pages, layout, SEO routes
+│  ├─ page.tsx           # Home (composes all sections)
+│  ├─ layout.tsx
+│  ├─ globals.css
+│  ├─ sitemap.ts
+│  └─ robots.ts
+├─ components/
+│  ├─ ui/                # Base primitives (Button, Card, Badge, …)
+│  ├─ layout/            # Navbar, Footer, ThemeProvider, Reveal
+│  ├─ sections/          # Hero, About, Skills, Experience, Projects, Contact
+│  └─ icons/             # Brand icons
+├─ content/              # Single source of truth for site data
+│  ├─ site.config.ts     # Name, role, social links, metadata
+│  ├─ projects.ts        # Project cards
+│  ├─ experience.ts
+│  └─ skills.ts
+├─ lib/                  # Utilities (cn, etc.)
+└─ types/                # Shared TypeScript types
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+All site content lives in [`src/content/`](src/content) — update those files to rebrand without touching components.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Local development
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm install
+npm run dev
+```
 
-## Learn More
+Open <http://localhost:3000>.
 
-To learn more about Next.js, take a look at the following resources:
+## Scripts
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Command              | What it does                       |
+| -------------------- | ---------------------------------- |
+| `npm run dev`        | Start the dev server               |
+| `npm run build`      | Production build                   |
+| `npm run start`      | Run the production build locally   |
+| `npm run lint`       | ESLint                             |
+| `npm run lint:fix`   | ESLint with autofix                |
+| `npm run format`     | Prettier write                     |
+| `npm run typecheck`  | `tsc --noEmit`                     |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deployment
 
-## Deploy on Vercel
+Deployed on [Vercel](https://vercel.com). Every push to `main` triggers an automatic production deploy.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contact
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Email:** jn_carlos.medina@outlook.com
+- **GitHub:** [@JuanMedinaRdz](https://github.com/JuanMedinaRdz)
+- **LinkedIn:** [Juan Carlos Medina](https://www.linkedin.com/in/juan-carlos-medina-95a939347/)

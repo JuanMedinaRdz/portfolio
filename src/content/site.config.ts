@@ -13,7 +13,7 @@ export const siteConfig = {
     "I build mobile and web apps — from screen design to working functionality.",
   description:
     "Portfolio of Juan Carlos Medina, a junior software engineer focused on mobile development with Flutter, plus web development and QA automation.",
-  url: "https://your-domain.com",
+  url: "https://portfolio-juan-carlos-medina.vercel.app",
   locale: "en_US",
   email: "jn_carlos.medina@outlook.com",
   location: "Remote · EU/LATAM",
